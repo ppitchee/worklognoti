@@ -6,8 +6,8 @@ const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.once('ready', async () => {
-    // const channel = client.channels.cache.get('992022679672586280'); // test
-    const channel = client.channels.cache.get('931042490553868298'); // mwe
+    // const channel = client.channels.cache.get('chanelid'); // test
+    const channel = client.channels.cache.get('chanelid'); // mwe
     try {
         const webhooks = await channel.fetchWebhooks();
         const webhook = webhooks.find(wh => wh.token);
